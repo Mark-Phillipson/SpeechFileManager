@@ -13,7 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>C:\Users\Mark\Dropbox\SpeechFileManager\</PublishUrl>
+    <HockeyAppResourceId>213cdc21debf422c97937949ba3541ec</HockeyAppResourceId>
+    <PublishUrl>C:\Users\Mark\Documents\Visual Studio 2015\Projects\SpeechFileManager\SpeechFileManager\Install\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -23,15 +24,14 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>https://www.dropbox.com/sh/y0h5zgzd2gbr3da/AAAQR0lkeB_fFmsJCyiukG03a%3fdl=0/</InstallUrl>
+    <InstallUrl>https://mspsystems-public.sharepoint.com/_layouts/15/guestaccess.aspx%3ffolderid=0bfc66d8edf4b47f6a1c9d5d7685440ae&amp;authkey=AUvdShgKM6kCmId48CA6IYs/</InstallUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <HockeyAppResourceId>213cdc21debf422c97937949ba3541ec</HockeyAppResourceId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -89,6 +89,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScratchPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScratchPad.Designer.cs">
+      <DependentUpon>ScratchPad.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainSearchForm.resx">
       <DependentUpon>MainSearchForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +107,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ScratchPad.resx">
+      <DependentUpon>ScratchPad.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

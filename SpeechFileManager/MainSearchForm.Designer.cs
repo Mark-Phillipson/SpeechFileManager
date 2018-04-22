@@ -61,6 +61,11 @@
             this.ClearSearchButton = new System.Windows.Forms.Button();
             this.BrowseButton = new System.Windows.Forms.Button();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.SelectFolderButton = new System.Windows.Forms.Button();
+            this.SelectEighthButton = new System.Windows.Forms.Button();
+            this.SelectNinthButton = new System.Windows.Forms.Button();
+            this.RedoSearchButton = new System.Windows.Forms.Button();
+            this.ScratchPadButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
@@ -68,12 +73,12 @@
             // SearchTextBox
             // 
             this.SearchTextBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SearchTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchTextBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SearchTextBox.Location = new System.Drawing.Point(74, 28);
+            this.SearchTextBox.Location = new System.Drawing.Point(74, 30);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(286, 26);
+            this.SearchTextBox.Size = new System.Drawing.Size(286, 22);
             this.SearchTextBox.TabIndex = 0;
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             this.SearchTextBox.Enter += new System.EventHandler(this.SearchTextBox_Enter);
@@ -85,25 +90,26 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ResultsListBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ResultsListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResultsListBox.Font = new System.Drawing.Font("Calibri", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResultsListBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ResultsListBox.FormattingEnabled = true;
-            this.ResultsListBox.ItemHeight = 24;
+            this.ResultsListBox.ItemHeight = 40;
             this.ResultsListBox.Location = new System.Drawing.Point(74, 58);
             this.ResultsListBox.Margin = new System.Windows.Forms.Padding(2);
             this.ResultsListBox.Name = "ResultsListBox";
-            this.ResultsListBox.Size = new System.Drawing.Size(773, 292);
+            this.ResultsListBox.Size = new System.Drawing.Size(1511, 564);
             this.ResultsListBox.TabIndex = 3;
             // 
             // SelectFirst
             // 
             this.SelectFirst.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.SelectFirst.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SelectFirst.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectFirst.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SelectFirst.Location = new System.Drawing.Point(0, 60);
+            this.SelectFirst.Location = new System.Drawing.Point(0, 61);
             this.SelectFirst.Margin = new System.Windows.Forms.Padding(2);
             this.SelectFirst.Name = "SelectFirst";
-            this.SelectFirst.Size = new System.Drawing.Size(70, 25);
+            this.SelectFirst.Size = new System.Drawing.Size(70, 41);
             this.SelectFirst.TabIndex = 4;
             this.SelectFirst.Text = "Select 1st";
             this.SelectFirst.UseVisualStyleBackColor = false;
@@ -113,11 +119,12 @@
             // 
             this.SelectSecondButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.SelectSecondButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SelectSecondButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectSecondButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SelectSecondButton.Location = new System.Drawing.Point(0, 84);
+            this.SelectSecondButton.Location = new System.Drawing.Point(0, 102);
             this.SelectSecondButton.Margin = new System.Windows.Forms.Padding(2);
             this.SelectSecondButton.Name = "SelectSecondButton";
-            this.SelectSecondButton.Size = new System.Drawing.Size(70, 25);
+            this.SelectSecondButton.Size = new System.Drawing.Size(70, 41);
             this.SelectSecondButton.TabIndex = 5;
             this.SelectSecondButton.Text = "Select 2nd";
             this.SelectSecondButton.UseVisualStyleBackColor = false;
@@ -127,11 +134,12 @@
             // 
             this.SelectThirdButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.SelectThirdButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SelectThirdButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectThirdButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SelectThirdButton.Location = new System.Drawing.Point(0, 107);
+            this.SelectThirdButton.Location = new System.Drawing.Point(0, 143);
             this.SelectThirdButton.Margin = new System.Windows.Forms.Padding(2);
             this.SelectThirdButton.Name = "SelectThirdButton";
-            this.SelectThirdButton.Size = new System.Drawing.Size(70, 25);
+            this.SelectThirdButton.Size = new System.Drawing.Size(70, 41);
             this.SelectThirdButton.TabIndex = 6;
             this.SelectThirdButton.Text = "Select 3rd";
             this.SelectThirdButton.UseVisualStyleBackColor = false;
@@ -141,11 +149,12 @@
             // 
             this.SelectFourthButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.SelectFourthButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SelectFourthButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectFourthButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SelectFourthButton.Location = new System.Drawing.Point(0, 131);
+            this.SelectFourthButton.Location = new System.Drawing.Point(0, 184);
             this.SelectFourthButton.Margin = new System.Windows.Forms.Padding(2);
             this.SelectFourthButton.Name = "SelectFourthButton";
-            this.SelectFourthButton.Size = new System.Drawing.Size(70, 25);
+            this.SelectFourthButton.Size = new System.Drawing.Size(70, 41);
             this.SelectFourthButton.TabIndex = 7;
             this.SelectFourthButton.Text = "Select 4th";
             this.SelectFourthButton.UseVisualStyleBackColor = false;
@@ -272,11 +281,12 @@
             // 
             this.SearchSubFoldersCheckBox.AutoSize = true;
             this.SearchSubFoldersCheckBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SearchSubFoldersCheckBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchSubFoldersCheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SearchSubFoldersCheckBox.Location = new System.Drawing.Point(453, 35);
+            this.SearchSubFoldersCheckBox.Location = new System.Drawing.Point(532, 35);
             this.SearchSubFoldersCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.SearchSubFoldersCheckBox.Name = "SearchSubFoldersCheckBox";
-            this.SearchSubFoldersCheckBox.Size = new System.Drawing.Size(122, 17);
+            this.SearchSubFoldersCheckBox.Size = new System.Drawing.Size(132, 18);
             this.SearchSubFoldersCheckBox.TabIndex = 12;
             this.SearchSubFoldersCheckBox.Text = "Search Sub  Folders";
             this.SearchSubFoldersCheckBox.UseVisualStyleBackColor = false;
@@ -286,11 +296,12 @@
             // 
             this.OpenFileDirectlyCheckBox.AutoSize = true;
             this.OpenFileDirectlyCheckBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.OpenFileDirectlyCheckBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpenFileDirectlyCheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.OpenFileDirectlyCheckBox.Location = new System.Drawing.Point(579, 35);
+            this.OpenFileDirectlyCheckBox.Location = new System.Drawing.Point(674, 35);
             this.OpenFileDirectlyCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.OpenFileDirectlyCheckBox.Name = "OpenFileDirectlyCheckBox";
-            this.OpenFileDirectlyCheckBox.Size = new System.Drawing.Size(109, 17);
+            this.OpenFileDirectlyCheckBox.Size = new System.Drawing.Size(123, 18);
             this.OpenFileDirectlyCheckBox.TabIndex = 13;
             this.OpenFileDirectlyCheckBox.Text = "Open File Directly";
             this.OpenFileDirectlyCheckBox.UseVisualStyleBackColor = false;
@@ -303,12 +314,12 @@
             this.SearchFromTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.SearchFromTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories;
             this.SearchFromTextBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SearchFromTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchFromTextBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchFromTextBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SearchFromTextBox.Location = new System.Drawing.Point(74, 0);
             this.SearchFromTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.SearchFromTextBox.Name = "SearchFromTextBox";
-            this.SearchFromTextBox.Size = new System.Drawing.Size(718, 26);
+            this.SearchFromTextBox.Size = new System.Drawing.Size(1417, 22);
             this.SearchFromTextBox.TabIndex = 16;
             this.SearchFromTextBox.TextChanged += new System.EventHandler(this.SearchFromTextBox_TextChanged);
             this.SearchFromTextBox.Enter += new System.EventHandler(this.SearchFromTextBox_Enter);
@@ -317,11 +328,12 @@
             // 
             this.SelectSeventhButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.SelectSeventhButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SelectSeventhButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectSeventhButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SelectSeventhButton.Location = new System.Drawing.Point(0, 203);
+            this.SelectSeventhButton.Location = new System.Drawing.Point(0, 307);
             this.SelectSeventhButton.Margin = new System.Windows.Forms.Padding(2);
             this.SelectSeventhButton.Name = "SelectSeventhButton";
-            this.SelectSeventhButton.Size = new System.Drawing.Size(70, 25);
+            this.SelectSeventhButton.Size = new System.Drawing.Size(70, 41);
             this.SelectSeventhButton.TabIndex = 18;
             this.SelectSeventhButton.Text = "Select 7th";
             this.SelectSeventhButton.UseVisualStyleBackColor = false;
@@ -331,11 +343,12 @@
             // 
             this.SelectSixthButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.SelectSixthButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SelectSixthButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectSixthButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SelectSixthButton.Location = new System.Drawing.Point(0, 179);
+            this.SelectSixthButton.Location = new System.Drawing.Point(0, 266);
             this.SelectSixthButton.Margin = new System.Windows.Forms.Padding(2);
             this.SelectSixthButton.Name = "SelectSixthButton";
-            this.SelectSixthButton.Size = new System.Drawing.Size(70, 25);
+            this.SelectSixthButton.Size = new System.Drawing.Size(70, 41);
             this.SelectSixthButton.TabIndex = 19;
             this.SelectSixthButton.Text = "Select 6th";
             this.SelectSixthButton.UseVisualStyleBackColor = false;
@@ -345,11 +358,12 @@
             // 
             this.SelectFifthButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.SelectFifthButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SelectFifthButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectFifthButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SelectFifthButton.Location = new System.Drawing.Point(0, 155);
+            this.SelectFifthButton.Location = new System.Drawing.Point(0, 225);
             this.SelectFifthButton.Margin = new System.Windows.Forms.Padding(2);
             this.SelectFifthButton.Name = "SelectFifthButton";
-            this.SelectFifthButton.Size = new System.Drawing.Size(70, 25);
+            this.SelectFifthButton.Size = new System.Drawing.Size(70, 41);
             this.SelectFifthButton.TabIndex = 20;
             this.SelectFifthButton.Text = "Select 5th";
             this.SelectFifthButton.UseVisualStyleBackColor = false;
@@ -359,11 +373,12 @@
             // 
             this.SearchButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.SearchButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SearchButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SearchButton.Location = new System.Drawing.Point(0, 30);
             this.SearchButton.Margin = new System.Windows.Forms.Padding(2);
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(70, 25);
+            this.SearchButton.Size = new System.Drawing.Size(70, 31);
             this.SearchButton.TabIndex = 21;
             this.SearchButton.Text = "Search";
             this.SearchButton.UseVisualStyleBackColor = false;
@@ -373,11 +388,12 @@
             // 
             this.RootButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.RootButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.RootButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RootButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.RootButton.Location = new System.Drawing.Point(0, 0);
+            this.RootButton.Location = new System.Drawing.Point(0, 1);
             this.RootButton.Margin = new System.Windows.Forms.Padding(2);
             this.RootButton.Name = "RootButton";
-            this.RootButton.Size = new System.Drawing.Size(70, 25);
+            this.RootButton.Size = new System.Drawing.Size(70, 28);
             this.RootButton.TabIndex = 22;
             this.RootButton.Text = "Root";
             this.RootButton.UseVisualStyleBackColor = false;
@@ -388,11 +404,12 @@
             // 
             this.SortAlphabeticallyCheckBox.AutoSize = true;
             this.SortAlphabeticallyCheckBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SortAlphabeticallyCheckBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SortAlphabeticallyCheckBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SortAlphabeticallyCheckBox.Location = new System.Drawing.Point(692, 35);
+            this.SortAlphabeticallyCheckBox.Location = new System.Drawing.Point(805, 35);
             this.SortAlphabeticallyCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.SortAlphabeticallyCheckBox.Name = "SortAlphabeticallyCheckBox";
-            this.SortAlphabeticallyCheckBox.Size = new System.Drawing.Size(119, 17);
+            this.SortAlphabeticallyCheckBox.Size = new System.Drawing.Size(134, 18);
             this.SortAlphabeticallyCheckBox.TabIndex = 23;
             this.SortAlphabeticallyCheckBox.Text = "Sort Alphabetically?";
             this.SortAlphabeticallyCheckBox.UseVisualStyleBackColor = false;
@@ -400,10 +417,11 @@
             // 
             // ResultsCountLabel
             // 
+            this.ResultsCountLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResultsCountLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ResultsCountLabel.Location = new System.Drawing.Point(0, 313);
+            this.ResultsCountLabel.Location = new System.Drawing.Point(0, 512);
             this.ResultsCountLabel.Name = "ResultsCountLabel";
-            this.ResultsCountLabel.Size = new System.Drawing.Size(70, 28);
+            this.ResultsCountLabel.Size = new System.Drawing.Size(70, 41);
             this.ResultsCountLabel.TabIndex = 24;
             this.ResultsCountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -411,11 +429,12 @@
             // 
             this.ClearSearchButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClearSearchButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.ClearSearchButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearSearchButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClearSearchButton.Location = new System.Drawing.Point(364, 29);
             this.ClearSearchButton.Margin = new System.Windows.Forms.Padding(2);
             this.ClearSearchButton.Name = "ClearSearchButton";
-            this.ClearSearchButton.Size = new System.Drawing.Size(80, 25);
+            this.ClearSearchButton.Size = new System.Drawing.Size(155, 25);
             this.ClearSearchButton.TabIndex = 25;
             this.ClearSearchButton.Text = "Clear Search";
             this.ClearSearchButton.UseVisualStyleBackColor = false;
@@ -426,22 +445,104 @@
             this.BrowseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BrowseButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BrowseButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BrowseButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BrowseButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BrowseButton.Location = new System.Drawing.Point(796, 0);
+            this.BrowseButton.Location = new System.Drawing.Point(1495, 0);
             this.BrowseButton.Margin = new System.Windows.Forms.Padding(2);
             this.BrowseButton.Name = "BrowseButton";
-            this.BrowseButton.Size = new System.Drawing.Size(51, 25);
+            this.BrowseButton.Size = new System.Drawing.Size(81, 26);
             this.BrowseButton.TabIndex = 26;
             this.BrowseButton.Text = "Browse";
             this.BrowseButton.UseVisualStyleBackColor = false;
             this.BrowseButton.Click += new System.EventHandler(this.BrowseButton_Click);
+            // 
+            // SelectFolderButton
+            // 
+            this.SelectFolderButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SelectFolderButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SelectFolderButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectFolderButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SelectFolderButton.Location = new System.Drawing.Point(0, 430);
+            this.SelectFolderButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SelectFolderButton.Name = "SelectFolderButton";
+            this.SelectFolderButton.Size = new System.Drawing.Size(70, 41);
+            this.SelectFolderButton.TabIndex = 27;
+            this.SelectFolderButton.Text = "Select Folder";
+            this.SelectFolderButton.UseVisualStyleBackColor = false;
+            this.SelectFolderButton.Click += new System.EventHandler(this.SelectFolderButton_Click);
+            // 
+            // SelectEighthButton
+            // 
+            this.SelectEighthButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SelectEighthButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SelectEighthButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectEighthButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SelectEighthButton.Location = new System.Drawing.Point(0, 348);
+            this.SelectEighthButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SelectEighthButton.Name = "SelectEighthButton";
+            this.SelectEighthButton.Size = new System.Drawing.Size(70, 41);
+            this.SelectEighthButton.TabIndex = 28;
+            this.SelectEighthButton.Text = "Select 8th";
+            this.SelectEighthButton.UseVisualStyleBackColor = false;
+            this.SelectEighthButton.Click += new System.EventHandler(this.SelectEighthButton_Click);
+            // 
+            // SelectNinthButton
+            // 
+            this.SelectNinthButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SelectNinthButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SelectNinthButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectNinthButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SelectNinthButton.Location = new System.Drawing.Point(0, 389);
+            this.SelectNinthButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SelectNinthButton.Name = "SelectNinthButton";
+            this.SelectNinthButton.Size = new System.Drawing.Size(70, 41);
+            this.SelectNinthButton.TabIndex = 29;
+            this.SelectNinthButton.Text = "Select 9th";
+            this.SelectNinthButton.UseVisualStyleBackColor = false;
+            this.SelectNinthButton.Click += new System.EventHandler(this.SelectNinthButton_Click);
+            // 
+            // RedoSearchButton
+            // 
+            this.RedoSearchButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.RedoSearchButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.RedoSearchButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RedoSearchButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.RedoSearchButton.Location = new System.Drawing.Point(0, 471);
+            this.RedoSearchButton.Margin = new System.Windows.Forms.Padding(2);
+            this.RedoSearchButton.Name = "RedoSearchButton";
+            this.RedoSearchButton.Size = new System.Drawing.Size(70, 41);
+            this.RedoSearchButton.TabIndex = 30;
+            this.RedoSearchButton.Text = "Redo Search";
+            this.RedoSearchButton.UseVisualStyleBackColor = false;
+            this.RedoSearchButton.Click += new System.EventHandler(this.RedoSearchButton_Click);
+            // 
+            // ScratchPadButton
+            // 
+            this.ScratchPadButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ScratchPadButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ScratchPadButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.ScratchPadButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScratchPadButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ScratchPadButton.Location = new System.Drawing.Point(0, 567);
+            this.ScratchPadButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ScratchPadButton.Name = "ScratchPadButton";
+            this.ScratchPadButton.Size = new System.Drawing.Size(70, 41);
+            this.ScratchPadButton.TabIndex = 31;
+            this.ScratchPadButton.Text = "Scratch Pad";
+            this.ScratchPadButton.UseVisualStyleBackColor = false;
+            this.ScratchPadButton.Click += new System.EventHandler(this.ScratchPadButton_Click);
             // 
             // MainSearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(850, 345);
+            this.ClientSize = new System.Drawing.Size(1579, 655);
+            this.Controls.Add(this.ScratchPadButton);
+            this.Controls.Add(this.RedoSearchButton);
+            this.Controls.Add(this.SelectNinthButton);
+            this.Controls.Add(this.SelectEighthButton);
+            this.Controls.Add(this.SelectFolderButton);
             this.Controls.Add(this.BrowseButton);
             this.Controls.Add(this.ResultsCountLabel);
             this.Controls.Add(this.SortAlphabeticallyCheckBox);
@@ -509,6 +610,11 @@
         private System.Windows.Forms.Button ClearSearchButton;
         private System.Windows.Forms.Button BrowseButton;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
+        private System.Windows.Forms.Button SelectFolderButton;
+        private System.Windows.Forms.Button SelectEighthButton;
+        private System.Windows.Forms.Button SelectNinthButton;
+        private System.Windows.Forms.Button RedoSearchButton;
+        private System.Windows.Forms.Button ScratchPadButton;
     }
 }
 

@@ -42,6 +42,7 @@ namespace SpeechFileManager
             searchFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Downloads\";
             this.SearchFromTextBox.Text = searchFolder;
             PerformSearch(searchFolder,"*.*",searchOption);
+            this.OpenFileDirectlyCheckBox.Checked = true;
             this.SearchTextBox.Focus();
         }
 
@@ -57,7 +58,7 @@ namespace SpeechFileManager
 
                     // This method assumes that the application has discovery permissions
                     // for all folders under the specified path.
-
+                    
                     if (sortType == SortType.ModifiedDescending)
                     {
                         fileList = directory.GetFiles(searchFilter, searchOption).OrderByDescending(f => f.LastWriteTime).Select(f => f.FullName);
@@ -68,19 +69,32 @@ namespace SpeechFileManager
                     }
 
                 }
+                catch (UnauthorizedAccessException exception)
+                {
+                    MessageBox.Show("Please only search folders that you have Access to."  + Environment.NewLine +  
+                        Environment.NewLine + exception.Message, "Access Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    SearchSubFoldersCheckBox.Checked = false;
+                    return;
+                }
                 catch (Exception exception)
                 {
-                    MessageBox.Show(exception.Message,"Exception Occurred",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show(exception.Message, "Exception Occurred", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                fileList = fileList.Take(100).ToList();
-                ManageSelectButtons(fileList);
-                this.ResultsListBox.DataSource = fileList;
+                if (fileList!=null)
+                {
+                    fileList = fileList.Take(100).ToList();
+                    ManageSelectButtons(fileList);
+                    this.ResultsListBox.DataSource = fileList;
+                }
 
             }
         }
 
         private void ManageSelectButtons(IEnumerable<string> fileList)
         {
+            this.SelectNinthButton.Visible = true;
+            this.SelectEighthButton.Visible = true;
             this.SelectSeventhButton.Visible = true;
             this.SelectSixthButton.Visible = true;
             this.SelectFifthButton.Visible = true;
@@ -91,12 +105,16 @@ namespace SpeechFileManager
 
             var listItems = fileList.Count();
             this.ResultsCountLabel.Text = listItems.ToString();
-            if (listItems < 8)
+            if (listItems < 9)
             {
-                this.SelectSeventhButton.Visible = false;
-                if (listItems < 7)
+                this.SelectNinthButton.Visible = false;
+                if (listItems<8)
                 {
-                    this.SelectSixthButton.Visible = false;
+                    this.SelectEighthButton.Visible = false;
+                }
+                if (listItems<7)
+                {
+                    this.SelectSeventhButton.Visible = false;
                 }
                 if (listItems < 6)
                 {
@@ -142,14 +160,21 @@ namespace SpeechFileManager
                 return;
             }
             this.ResultsListBox.SetSelected(index, true);
-            var file = this.ResultsListBox.Text;
-            if (openType == OpenType.SelectInExplorer)
+            var fileSelected = this.ResultsListBox.Text;
+            if (File.Exists(fileSelected))
             {
-                Process.Start("explorer.exe", "/e,/select," + file);
+                if (openType == OpenType.SelectInExplorer)
+                {
+                    Process.Start("explorer.exe", "/e,/select," + fileSelected);
+                }
+                else
+                {
+                    Process.Start(fileSelected);
+                }
             }
             else
             {
-                Process.Start(file);
+                MessageBox.Show("File not found has it been renamed or deleted?", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             this.SearchTextBox.Focus();
         }
@@ -279,6 +304,41 @@ namespace SpeechFileManager
                 SearchTextBox.SelectionStart = 0;
                 SearchTextBox.SelectionLength = SearchTextBox.Text.Length;
             }
+        }
+
+        private void SelectFolderButton_Click(object sender, EventArgs e)
+        {
+            if (Directory.Exists(this.SearchFromTextBox.Text))
+            {
+                var folder = this.SearchFromTextBox.Text;
+                Process.Start("explorer.exe", "/e,/select," + folder);
+            }
+            else
+            {
+                MessageBox.Show("The current folder does not exist", "Folder Not Found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+        }
+
+        private void SelectEighthButton_Click(object sender, EventArgs e)
+        {
+            LaunchFile(7);
+        }
+
+        private void SelectNinthButton_Click(object sender, EventArgs e)
+        {
+            LaunchFile(8);
+        }
+
+        private void RedoSearchButton_Click(object sender, EventArgs e)
+        {
+            PerformSearch(searchFolder, "*" + this.SearchTextBox.Text + "*.*", searchOption);
+        }
+
+        private void ScratchPadButton_Click(object sender, EventArgs e)
+        {
+            ScratchPad scratchPad = new ScratchPad();
+            scratchPad.Show();
         }
     }
 }
